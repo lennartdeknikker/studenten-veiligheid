@@ -46,25 +46,10 @@ var highlightLayer;
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Buurtcombinatie_code'] !== null ? Autolinker.link(feature.properties['Buurtcombinatie_code'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Buurt:</span> ' + (feature.properties['Buurtcombinatie'] !== null ? Autolinker.link(feature.properties['Buurtcombinatie'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Buurtcombinatie'] !== null ? Autolinker.link(feature.properties['Buurtcombinatie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Stadsdeel_code'] !== null ? Autolinker.link(feature.properties['Stadsdeel_code'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Opp_m2'] !== null ? Autolinker.link(feature.properties['Opp_m2'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['veiligheidsindex 2017 en 2018_VM14 gebiedsnaam voluit'] !== null ? Autolinker.link(feature.properties['veiligheidsindex 2017 en 2018_VM14 gebiedsnaam voluit'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['veiligheidsindex 2017 en 2018_totale veiligheidsindex 2018'] !== null ? Autolinker.link(feature.properties['veiligheidsindex 2017 en 2018_totale veiligheidsindex 2018'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['veiligheidsindex 2017 en 2018_totale veiligheidsindex 2017'] !== null ? Autolinker.link(feature.properties['veiligheidsindex 2017 en 2018_totale veiligheidsindex 2017'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Veiligheidsindex (0-200):</span> ' + (feature.properties['veiligheidsindex 2017 en 2018_totale veiligheidsindex 2018'] !== null ? Autolinker.link(feature.properties['veiligheidsindex 2017 en 2018_totale veiligheidsindex 2018'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -172,31 +157,22 @@ var highlightLayer;
             });
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Naam'] !== null ? Autolinker.link(feature.properties['Naam'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><span class="attribute-label">Naam:</span> ' + (feature.properties['Naam'] !== null ? Autolinker.link(feature.properties['Naam'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Straatnaam'] !== null ? Autolinker.link(feature.properties['Straatnaam'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Locatie:</span> ' + (feature.properties['Straatnaam'] !== null ? Autolinker.link(feature.properties['Straatnaam'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Doelgroep'] !== null ? Autolinker.link(feature.properties['Doelgroep'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Doelgroep (jongeren/studenten):</span> ' + (feature.properties['Doelgroep'] !== null ? Autolinker.link(feature.properties['Doelgroep'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Aantal_woningen'] !== null ? Autolinker.link(feature.properties['Aantal_woningen'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Aantal woningen:</span> ' + (feature.properties['Aantal_woningen'] !== null ? Autolinker.link(feature.properties['Aantal_woningen'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Status'] !== null ? Autolinker.link(feature.properties['Status'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Status:</span> ' + (feature.properties['Status'] !== null ? Autolinker.link(feature.properties['Status'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Termijn_project'] !== null ? Autolinker.link(feature.properties['Termijn_project'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Eigenaar_beheerder'] !== null ? Autolinker.link(feature.properties['Eigenaar_beheerder'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Informatie'] !== null ? Autolinker.link(feature.properties['Informatie'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['Webpagina'] !== null ? Autolinker.link(feature.properties['Webpagina'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"> <span class="attribute-label">Beheerder:</span> ' + (feature.properties['Eigenaar_beheerder'] !== null ? Autolinker.link(feature.properties['Eigenaar_beheerder'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
