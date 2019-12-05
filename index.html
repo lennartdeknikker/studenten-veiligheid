@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="datavis/css/qgis2web.css" />
     <link rel="stylesheet" href="datavis/css/additions.css" />
     <link rel="stylesheet" href="datavis/css/fontawesome-all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap"
+      rel="stylesheet"
+    />
     <style>
       #map {
         width: 1347px;
@@ -24,17 +28,134 @@
   </head>
   <body>
     <header>
-      <h1>Kan een student zich straks nog wel veilig voelen?</h1>
+      <p class="headertext">
+        Thirza Kramer & Lennart de Knikker
+      </p>
     </header>
-    <p>
-      Amsterdam is een echte studentenstad, maar is het er ook veilig? Maken
-      studenten de buurten onveilig of worden studentenwoningen juist geplaatst
-      in onveilige buurten? Dankzij de data die Gemeente Amsterdam ter
-      beschikbaar stelt, konden wij deze verschillende data met elkaar
-      overlappen en belangrijke inzichten uit halen.
-    </p>
-    <h2>De veiligheid rondom studentenwoningen in 2018</h2>
+    <div class="headline">
+      <div class="fade">
+        <div class="headline-wrapper">
+          <h1>Kan een student zich straks nog wel veilig voelen?</h1>
+          <p class="headline-text">
+            Amsterdam is een echte studentenstad, maar is het er ook veilig?
+            Maken studenten de buurten onveilig of worden studentenwoningen
+            juist geplaatst in onveilige buurten? Dankzij de data die Gemeente
+            Amsterdam ter beschikbaar stelt, konden wij deze verschillende data
+            met elkaar overlappen en belangrijke inzichten uit halen.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <h2>De veiligheid rondom studentenwoningen in 2018</h2>
+      <div class="legenda">
+        <div class="legenda-veiligheid">
+          <h3>veiligheid</h3>
+          <div class="legenda-veiligheid-colors"></div>
+          <p class="legenda-text"><span>veilig</span> <span>onveilig</span></p>
+        </div>
+        <div class="legenda-woningen">
+          <h3>Woningen</h3>
+          <div class="legenda-woningen-symbol">
+            bestaand:
+            <svg viewBox="0 0 10 10 " x="200" width="50" height="20">
+              <circle
+                fill="rgb(72, 123, 182)"
+                stroke="white"
+                stroke-width=".075em"
+                cx="5"
+                cy="5"
+                r=".3em"
+              />
+            </svg>
+          </div>
+          <div class="legenda-woningen-symbol">
+            Gepland:
+            <svg viewBox="0 0 10 10 " x="200" width="50" height="20">
+              <circle
+                stroke="rgb(72, 123, 182)"
+                fill="white"
+                stroke-width=".075em"
+                cx="5"
+                cy="5"
+                r=".25em"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="map"></div>
+    <div class="content-wrapper">
+      <h2>Inzichten</h2>
+      <p class="bodytext">
+        Er zijn een aantal belangrijke inzichten uit deze datavisualisatie
+        gekomen. Zo is er te zien dat er veel studentenwoningen zijn in minder
+        veilige buurten.
+      </p>
+      <h2>Toelichting</h2>
+      <p class="bodytext">
+        We wilden graag aan de slag met iets wat ons zelf ook aan gaat, vandaar
+        het onderwerp ‘studentenwoningen’. Verder wilden we dit combineren met
+        een aantal interessante gegeven, zoals ‘geluidsoverlast’, ‘algemene
+        veiligheid’, ‘criminaliteit’, ‘overlast’, ‘cameratoezicht’, etc.
+        Uiteindelijk hebben we ervoor gekozen om ‘studentenwoningen’ te
+        combineren met ‘veiligheid’. In deze datasets waren verschillende
+        jaartallen aanwezig, maar wij hebben ervoor gekozen om ons alleen op de
+        meest recente data te richten. Dit omdat het voor onze doelgroep het
+        meest relevant is. Onze doelgroep is namelijk de student die op dit
+        moment opzoek is naar een nieuwe woning.
+      </p>
+      <h2>Bronnen</h2>
+      <h3 class="subheading">Gemeente Amsterdam</h3>
+      <ul>
+        <li>
+          https://maps.amsterdam.nl/
+        </li>
+        <li>
+          https://maps.amsterdam.nl/jongerenstudentenhuisvesting/?LANG=nl
+        </li>
+        <li>
+          https://www.ois.amsterdam.nl/visualisatie/veiligheidsindex.html?index=Veiligheidsindex&postcode=1031AA&indeling=buurt&meting=2018-12
+        </li>
+        <li>
+          https://data.amsterdam.nl/
+        </li>
+      </ul>
+      <h3 class="subheading">Artikelen</h3>
+      <ul>
+        <li>
+          https://hvana.nl/lees/8264/studenten-in-daalwijk-ik-durf-s-avonds-nooit-naar-buiten
+        </li>
+        <li>
+          https://www.gemeente.nu/veiligheid/handhaving/studenten-amsterdam-voelen-zich-niet-veilig/
+        </li>
+        <li>
+          https://www.rtlnieuws.nl/nieuws/nederland/artikel/4620246/studenten-amsterdam-voelen-zich-onveilig-na-aanvallen-en-inbraken
+        </li>
+        <li>
+          https://www.trouw.nl/nieuws/ernstige-incidenten-op-amsterdamse-campussen-studenten-worden-ingezet-als-pioniers~be5bbc79/?referer=https%3A%2F%2Fwww.google.com%2F
+        </li>
+        <li>
+          https://www.parool.nl/amsterdam/studenten-ndsm-werf-zijn-bang-door-incidenten~bbba630a/?referer=https%3A%2F%2Fwww.google.com%2F
+        </li>
+        <li>
+          https://www.ad.nl/amsterdam/geen-camerabewaking-voor-studenten-spinozacampus~a6a61e3f/?referrer=https://www.google.com/
+        </li>
+        <li>
+          https://medium.com/nightingale/what-makes-a-data-visualisation-elegant-fb032c3a259e
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <span>
+        Dataweek december 2019
+      </span>
+      <span>
+        Communicatie & Multimedia Design Amsterdam
+      </span>
+    </footer>
+
     <!-- datavis scripts -->
     <script src="datavis/js/qgis2web_expressions.js"></script>
     <script src="datavis/js/leaflet.js"></script>

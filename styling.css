@@ -1,32 +1,199 @@
-html,
-body {
-  margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+:root {
+  --c1: #fffcf6;
+  --font-header: "Bebas Neue", cursive;
+  --font-body: "Roboto", sans-serif;
+  --content-width: 35%;
 }
 
-header {
-  background-color: rgb(190, 231, 255);
-  height: 10em;
+html {
+  font-family: var(--font-body);
+  background-color: var(--c1);
   display: flex;
   justify-content: center;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-h1 {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-p {
-  width: 40em;
-  padding: 1.5rem;
+.headertext {
+  margin: 0.5em;
+  color: darkgray;
+}
+
+.headline-wrapper {
+  width: var(--content-width);
+  margin: 3em 0;
+}
+
+.headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* copied the striped bg from: https://pudding.cool/2019/10/prosecutors/ */
+  background: linear-gradient(
+    135deg,
+    rgba(232, 232, 232, 0) 40%,
+    #b0b0b0 40%,
+    #b0b0b0 50%,
+    rgba(232, 232, 232, 0) 50%,
+    rgba(232, 232, 232, 0) 90%,
+    #b0b0b0 90%,
+    #b0b0b0 100%
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(232, 232, 232, 0) 40%,
+    rgb(176, 176, 176) 40%,
+    rgb(176, 176, 176) 50%,
+    rgba(232, 232, 232, 0) 50%,
+    rgba(232, 232, 232, 0) 90%,
+    rgb(176, 176, 176) 90%,
+    rgb(176, 176, 176) 100%
+  );
+  background-position-x: initial;
+  background-position-y: initial;
+  background-size: 7.07px 7.07px;
+  background-repeat-x: initial;
+  background-repeat-y: initial;
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
+  background-size: 7.07px 7.07px;
+}
+
+.headline-text {
+  margin: 1em 0 0;
+}
+
+.fade {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 255, 255, 0)),
+    to(var(--c1))
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    var(--c1) 100%
+  );
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-size: 5em;
+  width: 100%;
+  margin: 0;
+  line-height: 90%;
+}
+
+.content-wrapper {
+  width: var(--content-width);
 }
 
 h2 {
-  padding: 0 1.5rem;
+  font-family: var(--font-body);
+  font-size: 1em;
+  text-align: left;
   margin: 0 0 1em;
+}
+
+h3 {
+  font-size: 1em;
+  text-align: right;
+  margin: 0 0 1em;
+  width: 100%;
 }
 
 #map {
   width: 100% !important;
+  height: 40em !important  ;
   box-sizing: border-box;
+  margin-block-end: 3em;
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.legenda-veiligheid {
+  width: 70%;
+}
+
+.legenda-veiligheid,
+.legenda-woningen {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-block-end: 1em;
+}
+
+.legenda-woningen {
+  align-items: flex-end;
+}
+
+.legenda-veiligheid-colors {
+  background: linear-gradient(to right, white, #b30000);
+  border: 1px solid black;
+  width: 100%;
+  height: 1.5em;
+}
+
+.legenda-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.5em 0 1em;
+}
+
+.legenda-woningen-symbol {
+  width: 8em;
+  display: flex;
+  margin: 0 0 1em;
+  justify-content: space-between;
+}
+
+.bodytext {
+  margin-block-end: 3em;
+}
+
+.subheading {
+  text-align: left;
+  color: grey;
+}
+
+ul {
+  font-style: italic;
+  list-style-type: square;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: darkgray;
+  padding: 1em;
+  margin-block-start: 3em;
+  background-color: black;
 }
