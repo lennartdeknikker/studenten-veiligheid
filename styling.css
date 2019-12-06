@@ -106,6 +106,7 @@ h1 {
 
 .content-wrapper {
   width: var(--content-width);
+  overflow: hidden;
 }
 
 h2 {
@@ -127,12 +128,14 @@ h3 {
   height: 40em !important  ;
   box-sizing: border-box;
   margin-block-end: 3em;
+  box-shadow: 0 0 2px black;
 }
 
 .legenda {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .legenda-veiligheid {
@@ -149,6 +152,8 @@ h3 {
 
 .legenda-woningen {
   align-items: flex-end;
+  margin-left: 1em;
+  width: 27%;
 }
 
 .legenda-veiligheid-colors {
@@ -184,6 +189,12 @@ h3 {
 ul {
   font-style: italic;
   list-style-type: square;
+  width: 100%;
+  word-wrap: break-word;
+}
+
+li {
+  width: 100%;
 }
 
 footer {
@@ -192,8 +203,22 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  color: darkgray;
+  color: white;
   padding: 1em;
   margin-block-start: 3em;
-  background-color: black;
+  background-color: darkgrey;
+  border-top: 1px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --content-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 1285px) {
+  .legenda {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
